@@ -1,6 +1,5 @@
 package chap03;
 
-
 public class Lotto {
 
 	public static void main(String[] args) {
@@ -22,6 +21,18 @@ public class Lotto {
 		for (int i = 0; i < lotto.length; i++) {
 			System.out.print(lotto[i] + " ");
 		}
+		System.out.println("");
+		
+		// 4. 로또 값 중 최대값 및 최대값의 인덱스 출력
+		int max = lotto[0];
+		int max_idx = 0;
+		for (int i = 1; i < lotto.length; i++) {
+			if (max < lotto[i]) {
+				max = lotto[i];
+				max_idx = i;
+			}
+		}
+		System.out.println("max: " + max + " max_index: " + max_idx);
 	}
 
 }
